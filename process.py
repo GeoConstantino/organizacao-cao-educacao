@@ -46,6 +46,7 @@ def read_keywords():
     return {r[0]: r[1].lower().strip() for r in rows}
 
 
+# TODO: Improve this function
 def translate(city_name, cities):
     city_name_lower = city_name.lower()
     if city_name_lower in cities:
@@ -192,6 +193,7 @@ def last_modified_document(cur, paths):
         return sorted(last_modified, key=itemgetter(2), reverse=True)[0]
 
 
+# TODO: Improve find city name regex
 def find_city(content):
     city = re.search(
         '(?<=Munic[ií]pio)\s*:\s*\w+(\w+\s*)+',
