@@ -49,8 +49,9 @@ def read_keywords():
 # TODO: Improve this function
 def translate(city_name, cities):
     city_name_lower = city_name.lower()
-    if city_name_lower in cities:
-        return city_name
+    for city in cities:
+        if city.lower() in city_name_lower:
+            return city
 
     ratios = []
     for city in cities:
